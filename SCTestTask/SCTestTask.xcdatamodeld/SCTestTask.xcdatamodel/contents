@@ -17,9 +17,14 @@
         <attribute name="repoDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="license" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LicenseManagedObject" inverseName="repository" inverseEntity="LicenseManagedObject" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="RepositoryManagedObject" positionX="-63" positionY="-18" width="128" height="180"/>
         <element name="LicenseManagedObject" positionX="-54" positionY="54" width="128" height="120"/>
+        <element name="RepositoryManagedObject" positionX="-63" positionY="-18" width="128" height="180"/>
     </elements>
 </model>
